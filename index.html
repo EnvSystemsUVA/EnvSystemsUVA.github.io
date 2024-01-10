@@ -1,0 +1,683 @@
+
+<!--doctype html-->
+
+<!-- Copyright Julianne Quinn - Spring 2024 -->
+<!-- Web template from Dr. Vicente Ordonez -->
+<!-- julianne.quinn@virginia.edu -->
+
+<html lang="en">
+
+<head>  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Julianne Quinn, 2024">
+  <title>Environmental Systems Modeling and Management (CE 4110 / CE 6250)</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/vision-style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="theme-color" content="#563d7c">
+
+</head>
+
+<body>
+<div class="container blank-container pt-3">
+
+  <header class="website-header">
+  </header>
+
+  <main role="main" class="px-4 pb-5">
+    <div class="header row header-text mb-2" style="padding-top: 2em;" id="main">
+      <div class="col-lg-9 text-lg-left text-center">
+
+        <img src="images/uva-logo.png" height="100"> 
+
+        <h4 class="mb-1" style="color:#444;margin-top:10px">
+          SYS4021:Linear Statistical Models<span style="color:#767676;font-size:0.8em">| Fall 2023</span>
+        </h4>
+        
+        <div>
+          <div class="d-sm-inline">
+            <img class="rounded-circle my-2" src="images/julie_quinn.jpg" width="86">
+            <img class="rounded-circle my-2" src="images/daniel_lassiter.jpeg" width="86">
+          </div>
+        </div>
+        <div>
+          <span>Instructor: <a href="https://engineering.virginia.edu/faculty/julianne-quinn"><strong>Julianne Quinn</strong></a></span>
+          <span class="d-lg-inline d-block mb-lg-0 mb-2">(julianne.quinn at virginia.edu), <span style="font-size:0.9em">Office Hours: Thur 3:30-5 PM in Olsson 102D.</span></span>
+        </div>
+        <div>
+          <span>Teaching Assistant: <a href="https://www.linkedin.com/in/hossein-kaviani-hamedani"><strong>Daniel Lassiter</strong></a></span> 
+          <span class="d-lg-inline d-block mb-lg-0 mb-2">(hk3sku at virginia.edu), <span style="font-size:0.9em">Office Hours: Tue 3-4:30 PM on Zoom.</span></span> 
+        </div>
+        <div style="font-weight:400">Class Time: Tuesday and Thursday between 11 AM and 12:15 PM (ET).</div>
+        <div>Discussion Forum: <a href="https://piazza.com/class/lklbtpugy2r2jn">Piazza</a></div>
+
+      </div>
+<!-- <div class="col-1 text-right d-lg-block d-none">
+        <a href="">
+          <img src="images/r.jpg" width="650%" />
+        </a>
+      </div> 
+ -->
+
+
+
+    <hr>
+    <div style=" position:fixed;background:white;width:100%;z-index: 999;top: 0;flex-direction: column; padding-bottom: 1em; padding-top: 1em;">
+      <span>
+        <a href="#main">Main</a> | <a href="#class">Class Description</a> | <a href="#schedule">Schedule</a> | <a href="#evaluation">Student Evaluation</a> | <a href="#policies">Course Policies</a> 
+      </span>
+    </div>
+    <hr>
+    </div>
+
+
+
+    
+    <div class="section" id="class" style="padding-top: 3em;">
+    <h4> Basic Course Information</h4>
+  </div>
+  <hr>
+    <div class="section row mb-2 p-1" style="padding-top:3em;overflow: auto;" >
+      
+      <div class="col-12 p-2" id="description" style="padding-top: 2 em;">
+  <strong><b>Course Description: </b></strong>
+          <p>The course emphasizes the formulation of environmental management issues as optimization problems. 
+            Simulation models will be presented and then combined with optimization algorithms. 
+            Environmental issues to be addressed may include power capacity expansion, air quality, water quality, water supply, and reservoir operations. 
+            Optimization techniques presented include linear programming, dynamic programming, nonlinear programming and genetic algorithms.</p>
+      </div>
+      <div class="col-12 p-2" id="objectives" style="padding-top: 2 em;">
+  <strong><b>Learning Objectives: </b></strong> 
+     <ul>
+    <li>Formulate linear, dynamic, and nonlinear programming management problems.</li>
+    <li>Simulate a variety of simple environmental systems.</li>
+    <li>Use optimization software to analyze environmental systems and interpret the output to guide management decisions.</li>
+    <li>Learn to present a structured, organized systems analysis.</li>
+    </ul>
+  </div>
+      <div class="col-6 p-2" id="prereqs" style="padding-top: 2 em;">
+        <strong><b>Prerequisites: </b></strong> 
+        <p> Students should have a basic command of linear algebra, calculus, statistics, and programming. We will use Python for our programming sessions.</p>
+      </div>
+
+      <div class="col-6 p-2" id="textbook" style="padding-top: 2 em;">
+  <strong><b>Textbook:</b></strong> 
+          <p>Chapters from: 
+    <ul>
+    <li>Loucks, D. P., & Van Beek, E. (2017). <a href="https://link.springer.com/chapter/10.1007/978-3-319-44234-1_1">Water resource systems planning and management: An introduction to methods, models, and applications.</a> Springer.</li>
+          </ul>
+    </p>
+      </div>
+    </div>
+
+
+
+    <div class="section " id="schedule" style="padding-top: 3em;">
+      <h4 >Schedule</h4>
+      <hr>
+      <div class="section section-text">
+      <p>
+        <strong>Disclaimer: </strong>
+        Prof. Quinn reserves the right to make changes to the syllabus, including the due dates of homeworks, project assignments, and exams. These changes will be announced as early as possible.
+      </p>
+    </div>
+  
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Topic</th>
+            <th scope="col" colspan="8">&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Thur, Jan 18th</td>
+          <td>
+            Introduction to Environmental Systems Modeling and Problem Framing <!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>
+          <td class="text-center" colspan="8"></td>
+        </tr>
+  
+        <tr>
+          <td>Tue, Jan 23rd</td>
+          <td>
+            Analytical Nonlinear Optimization <!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>
+          <td class="text-center" colspan="8"></td>
+        </tr>
+
+        <tr>
+          <td>Thur, Jan 25th</td>
+          <td>
+            Analytical Nonlinear Optimization <!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>
+          <td class="text-center" colspan="8">
+            Release Homework 1: Nonlinear Optimization
+            <div class="mt-1 p-0"><strong>Due: 11:59 PM Fri, Feb 2nd / Sun, Feb 4th (VEO).</strong></div>
+          </td>
+        </tr>
+        
+         <tr>
+          <td>Tue, Jan 30th</td>
+          <td>
+            Nonlinear Programming (NLP) <!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>
+          <td class="text-center" colspan="8"></td>
+        </tr>
+
+        <tr>
+          <td>Thur, Feb 1st</td>
+          <td>
+            Evolutionary Algorithms (EAs) <!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>
+          <td class="text-center" colspan="8"></td>
+        </tr>
+
+        <tr class="assignment">
+          <td><strong>11:59 PM Fri, Feb 2nd / Sun, Feb 4th (VEO)</strong></td>
+          <td class="text-center" colspan="8">
+            <strong>Due</strong> Homework 1 : Nonlinear Optimization
+          </td>
+        </tr>
+    
+
+        <tr>
+          <td>Tue, Feb 6th</td>
+          <td>
+            Linear Programming (LP) <!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>
+          <td class="text-center" colspan="8"></td>
+        </tr>
+
+        <tr>
+          <td>Thur, Feb 8th</td>
+          <td>
+            Linear Programming (LP <!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>
+          <td class="text-center" colspan="8">
+            Release Homework 2: Linear Optimization
+            <div class="mt-1 p-0"><strong>Due: 11:59 PM Fri, Feb 16th / Sun, Feb 18th (VEO).</strong></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Tue, Feb 13th</td>
+          <td>
+            Linear Programming (LP) <!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>
+          <td class="text-center" colspan="8"></td>
+        </tr>
+
+        <tr>
+          <td>Thur, Feb 15th</td>
+          <td>
+            Mixed Integer Linear Programming (MILP) <!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>
+          <td class="text-center" colspan="8"></td>
+        </tr>
+
+        <tr class="assignment">
+          <td><strong>11:59 PM Fri, Feb 16th / Sun, Feb 18th (VEO)</strong></td>
+          <td class="text-center" colspan="8">
+            <strong>Due</strong> Homework 2: Linear Optimization
+          </td>
+        </tr>
+
+        <tr>
+          <td>Tue, Feb 20th</td>
+          <td>
+            Deterministic Dynamic Programming (DDP) <!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>
+          <td class="text-center" colspan="8"></td>
+        </tr>
+
+        <tr>
+          <td>Thur, Feb 22nd</td>
+          <td>
+            Deterministic Dynamic Programming (DDP) <!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>
+          <td class="text-center" colspan="8">
+            Release Homework 3: Deterministic Dynamic Programming
+            <div class="mt-1 p-0"><strong>Due: 11:59 PM Fri, Mar 1st / Sun, Mar 3rd (VEO).</strong></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Tue, Feb 27th</td>
+          <td>
+            Decision Theory <!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>
+          <td class="text-center" colspan="8"></td>
+        </tr>
+
+        <tr>
+          <td>Thur, Feb 29th</td>
+          <td>
+            Chance Constrained Programming (CCP)
+          </td>
+          <td class="text-center" colspan="8">
+            Release Homework 4: Decision Theory and Chance Constrained Programming
+            <div class="mt-1 p-0"><strong>Due: 11:59 PM Fri, Mar 15th / Sun, Mar 17th (VEO).</strong></div>
+          </td>
+        </tr>
+
+        <tr class="assignment">
+          <td><strong>11:59 PM Fri, Mar 1st / Sun, Mar 3rd (VEO)</strong></td>
+          <td class="text-center" colspan="8">
+            <strong>Due</strong> Homework 3: Deterministic Dynamic Programming
+          </td>
+        </tr>
+
+          <tr>
+          <td><strong>Tue, Mar 5th and Thur, Mar 7th</strong></td>
+          <td>
+             Spring Break, No Class
+          </td>
+          <td class="text-center" colspan="8"></td>
+        </tr>
+
+        <tr class="exam">
+          <td>Tue, Mar 12th</td>
+          <td>
+            Exam 1: Deterministic Optimization Methods
+          </td>
+          <td class="text-center" colspan="8"></td>
+        </tr>
+
+        <tr>
+          <td><strong>Thur, Mar 14th</strong></td>
+          <td>
+             Stochastic Programming
+          </td>
+          <td class="text-center" colspan="8"></td>
+        </tr>
+          
+        <tr class="assignment">
+          <td><strong>11:59 PM Friday, Mar 15th / Sun, Mar 17th (VEO)</strong></td>
+          <td class="text-center" colspan="10">
+            <strong>Due </strong>Homework 4: Decision Theory and CCP
+          </td>
+        </tr>  
+
+        <tr>
+          <td>Tue, Mar 19th</td>
+          <td>
+            Stochastic Dynamic Programming (SDP) <!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>
+          <td class="text-center" colspan="8"></td>
+        </tr>
+
+        <tr>
+          <td>Thur, Mar 21st</td>
+          <td>
+            Stochastic Dynamic Programming (SDP) <!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>   
+          <td class="text-center" colspan="8">
+            Release Homework 5: SDP and Direct Policy Search
+            <div class="mt-1 p-0"><strong>Due: 11:59 PM Fri, Mar 29th / Sun, Mar 31st (VEO).</strong></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Tue, Mar 26th</td>
+          <td>
+            Direct Policy Search (DPS)
+          </td>
+        </tr>        
+
+        <tr>
+          <td>Thur, Mar 28th</td>
+          <td>
+            Multi-Objective Optimization (MOO) <!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>
+          <td class="text-center" colspan="8"></td>
+        </tr>
+
+        <tr class="assignment">
+          <td><strong>11:59 PM Fri, Mar 29th / Sun, Mar 31st (VEO)</strong></td>
+          <td class="text-center" colspan="8">
+            <strong>Due</strong> Homework 5: SDP and DPS
+          </td>
+        </tr>
+       
+        <tr>
+          <td>Tue, Apr 2nd</td>
+          <td>
+            Multi-Objective Evolutionary Algorithms (MOEAs) <!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>
+          <td class="text-center" colspan="8"></td>
+        </tr>
+
+         <tr>
+          <td>Thur, Apr 4th</td>
+          <td>
+            Deep Uncertainty (DU) <!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>
+          <td class="text-center" colspan="8">
+            Release Project Proposal (CE 6250 only)
+            <div class="mt-1 p-0"><strong>Due: 11:59 PM Fri, Apr 12th / Sun, Apr 14th (VEO).</strong></div>
+          </td>
+         </tr>
+
+         <tr>
+          <td>Tue Apr 9th</td>
+          <td>
+            Robust Decision Making (RDM) and Optimization (RO) <!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>
+             <td class="text-center" colspan="8"></td>
+        </tr>
+    
+        <tr class="exam">
+          <td>Thur, Apr 11th</td>
+          <td>
+            Exam 2: Stochastic Optimization Methods
+          </td>
+          <td class="text-center" colspan="8"></td>
+        </tr>
+
+        <tr class="assignment">
+          <td><strong>11:59 PM Fri, Apr 12th / Sun, Apr 14th (VEO)</strong></td>
+          <td class="text-center" colspan="8">
+            <strong>Due</strong> Project Proposal
+          </td>
+        </tr>
+         
+         <tr>
+          <td>Tue, Apr 16th and Thur, Apr 18th</td>
+          <td>
+            Project Time in Class<!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>
+          <td class="text-center" colspan="8">
+            Release Project Presentation Recording Assignment
+            <div class="mt-1 p-0"><strong>Due: 11:59 PM Fri, Apr 26th / Sun, Apr 28th (VEO).</strong></div>
+          </td>
+        </tr>
+
+      
+         <tr>
+          <td>Tue, Apr 23rd and Thur, Apr 25th</td>
+          <td>
+            Project Time in Class<!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>
+          <td class="text-center" colspan="8">
+            Release Peer Feedback on Project Presentations
+            <div class="mt-1 p-0"><strong>Due: 11:59 PM Mon, Apr 29th / Wed, May 1st (VEO).</strong></div>
+          </td>
+        </tr>
+
+        <tr class="assignment">
+          <td><strong>11:59 PM Fri, Apr 26th / Sun, Apr 28th (VEO)</strong></td>
+          <td class="text-center" colspan="8">
+            <strong>Due</strong> Project Presentation Recordings
+          </td>
+        </tr>
+
+        <tr class="assignment">
+          <td><strong>11:59 PM Mon, Apr 29th / Wed, May 1st (VEO)</strong></td>
+          <td class="text-center" colspan="8">
+            <strong>Due</strong> Peer Feedback on Project Presentations
+          </td>
+        </tr>
+        
+        <tr>
+          <td>Tue, Apr 30th</td>
+          <td>
+            Peer Feedback on Project Presentations <!--[<a href="">pptx</a>] [<a href="">pdf</a>]-->
+          </td>
+        </tr>
+          
+          <tr class="assignment">
+          <td><strong>11:59 PM Thur, May 9th / Sat, May 11th (VEO)</strong></td>
+          <td class="text-center" colspan="8">
+            <strong>Due </strong>Project Report
+          </td>
+        </tr> 
+
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section evaluation-text" id="evaluation" style="padding-top: 3em;">
+      <h4> Student Evaluation and Assessment </h4>
+      <hr>
+      <p id="grading" style="padding-top: 1em;">
+  <strong><b>Grading: </b></strong> 
+        <!--To be announced officially on first day of class. -->
+        <ul> 
+          <li>Homeworks: 40% </li>
+          <li>Exam 1: 20%</li>
+          <li>Exam 2: 20%</li>
+          <li>Project: 20%</li>
+          <li>Class Participation: +% (extra) -- includes synchronous participation + Piazza.</li>
+        </ul>
+      </p>
+  
+      <p id="labs" style="padding-top: 2 em;">
+        <strong><b>Homeworks: </b></strong>
+        <p>On Friday morning at 9 am ET, bi-weekly laboratory assignments based upon course and laboratory notes will be posted via the Quizzes feature on the course Canvas site. 
+        These assignments provide exercises in R programming that supplement the material covered in class and provide the foundation for the projects. 
+        Each lab assignment requires students to program in R and analyze a supplied data set. 
+        <br /> <br />The assignments are designed to assess your knowledge on statistical modeling techniques and their mechanics. 
+        These assignments must be done individually, include an honor pledge, and be completed by Friday night at 11:59 pm ET, typically two weeks later. 
+        While there is no time limit for these assignments, they are designed not to take more than 50 minutes. Laboratory sessions are excellent practice for exams and real-world analysis under time constraints. 
+        At the end of the semester, the lowest grade on the lab assignments will be dropped. Additionally, if you complete the Bonus Lab, it will replace your next lowest lab.</p>
+      </p>
+  
+      <p id="exams" style="padding-top: 2 em;">
+        <strong><b>Exams: </b></strong>
+        <p>Exams are based entirely on classroom notes and discussions, readings, and homeworks. Each exam will be closed book and require analytical problem solving.
+          The exam will take place during class time, except for VEO students, who will take it remotely on Canvas through the Quizzes page and upload their answers within 75 minutes.
+          Example questions for both exams will be provided a week beforehand.</p>
+      </p>
+
+      <p id="projects" style="padding-top: 2 em;">
+        <strong><b>CEE 4110 Group Project: </b></strong>
+        <p>The class will have a final group project (~3 students/group) utilizing the Advanced Topics of this course on a real-world environmental problem. 
+          The instructors will provide a few models that students can choose to use for their project.
+          The students will define a problem that this model and the advanced tools in class can be used to address.
+          These projects will provide students with an opportunity to not only apply the tools in class to a real-world problem, 
+          but also to proficiently communicate results in a recorded presentation and a technical document or client report.
+        Students will also have an opportunity to provide feedback to other groups on their projects and recorded presentations, 
+          which they will deliver in writing, as well as in person on the last day of class.</p>
+        <strong><b>Grading: </b></strong> 
+        <ul> 
+          <li>Presentation: 20% </li>
+          <li>Peer Feedback: 10%</li>
+          <li>Final Report: 70%</li>
+        </ul>
+      </p>
+
+      <p id="projects" style="padding-top: 2 em;">
+        <strong><b>CEE 6250 Individual Project: </b></strong>
+        <p>The class will have a final individual project utilizing the Advanced Topics of this course on a real-world environmental problem. 
+          The students will define their own environmental problem and write a proposal on how they will use the advanced tools in class to address it.
+          These projects will provide students with an opportunity to not only apply the tools in class to a real-world problem, 
+          but also to proficiently communicate results in a recorded presentation and a technical document or client report.
+        Students will also have an opportunity to provide feedback to other groups on their projects and recorded presentations, 
+          which they will deliver in writing, as well as in person on the last day of class.</p>
+        <strong><b>Grading: </b></strong> 
+        <ul> 
+          <li>Proposal: 20% </li>
+          <li>Presentation: 20% </li>
+          <li>Peer Feedback: 10%</li>
+          <li>Final Report: 60%</li>
+        </ul>
+      </p>
+  
+    </div>
+  
+    
+    <div class="section policies-text"  id = "policies" style="padding-top: 4em;">
+  <h4> Course Policies </h4>
+  <hr>
+       <p id="submission" style="padding-top: 2em;">
+  <strong><b>Submission and Late Submission Policy: </b></strong> 
+        <p>On the day a homework or project is due, you must submit an electronic copy <strong>in pdf (NOT doc or docx, etc.)</strong> along with source code on the Canvas site and pledge your submission.
+        No late assignments will be accepted in this class, unless the student has procured special accommodations for warranted circumstances. <br />
+        <br />In many cases you will do better to submit an incomplete assignment rather than a late one.</p>
+      </p>
+      <p id="AI" style="padding-top": 2 em;">
+        <strong><b>Use of Generative Artificial Intelligence:</b></strong>
+        <p>Generative artificial intelligence (AI) tools—software that creates new text, images, computer code, audio, video, and other content—have become widely available. 
+          Well-known examples include ChatGPT for text and DALL•E for images. This policy governs all such tools, including those released during our semester together. 
+          You may NOT use generative AI tools in this course for homeworks. You may use them on projects when I explicitly permit you to do so. Otherwise, you should refrain from using such tools. 
+          If you DO use generative AI tools on  projects in this class, you must properly document and credit the tools themselves. 
+          Cite the tool you used, following the pattern for computer software given in the specified style guide. Additionally, please include a brief description of how you used the tool. <br />
+          <br />If you choose to use generative AI tools, please remember that they are typically trained on limited datasets that may be out of date. 
+          Additionally, generative AI datasets are trained on pre-existing material, including copyrighted material; therefore, relying on a generative AI tool may result in plagiarism or copyright violations. 
+          Finally, keep in mind that the goal of generative AI tools is to produce content that seems to have been produced by a human, not to produce accurate or reliable content; 
+          therefore, relying on a generative AI tool may result in your submission of inaccurate content. It is your responsibility—not the tool's—to assure the quality, integrity, and accuracy of work you submit in any college course. 
+          If you use generative AI tools to complete assignments in this course, in ways that I have not explicitly authorized, I will apply the UVA Honor Code as appropriate to your specific case. 
+          In addition, you must be wary of unintentional plagiarism or fabrication of data. Please act with integrity, for the sake of both your personal character and your academic record.</p>
+    </p>
+      <p id="recording" style="padding-top: 2em;">
+  <strong><b>Recording of Lectures: </b></strong>
+        <p>Every lecture will be recorded in order to accommodate students VEO students, as well as students who are sick or cannot attend for some other reason. 
+          Because lectures include fellow students, you and they may be personally identifiable on the recordings. 
+          These recordings may only be used for the purpose of individual or group study with other students enrolled in this class during this semester. <br />
+        <br />You may not distribute them in whole or in part through any other platform or to any persons outside of this class, nor may you make your own recordings 
+        of this class unless written permission has been obtained from the Instructor and all participants in the class have been informed that recording will occur. 
+        If you want additional details on this, please see Provost Policy 008 and follow-up guidelines.
+        <strong>If you notice that I have failed to activate the recording feature, please remind me!</strong></p>
+      </p>
+
+      </p>
+      <p id="illness" style="padding-top: 2em;">
+  <strong><b>Illness: </b></strong> 
+        <p>I try to create a safe environment, not only for you (our students), but also for our faculty and our staff. To that end, please stay home or in 
+          your dorm room if you are ill with or are symptomatic for any communicable disease. I would rather you stay home and work something out with 
+          me for making up work or taking an exam than for an illness to spread through the class. If you believe you are sick, please contact Student 
+          Health for appropriate treatment or testing. </p>
+      </p>
+     
+      </p>
+      <p id="religious" style="padding-top: 2em;">
+  <strong><b>Religious Accommodations: </b></strong> 
+        <p>It is the University's long-standing policy and practice to reasonably accommodate students so that they do not experience an adverse academic consequence 
+          when sincerely held religious beliefs or observances conflict with academic requirements.</p>
+        <p>Students who wish to request academic accommodation for a religious observance should submit their request to me by private message on Piazza
+          as far in advance as possible. Students who have questions or concerns about academic accommodations for religious observance or religious beliefs may contact 
+          the University’s Office for Equal Opportunity and Civil Rights (EOCR) at <a href="mailto:UVAEOCR@virginia.edu">UVAEOCR@virginia.edu</a> or 434-924-3200.</p>
+      </p>
+
+      <p id="accessibility" style="padding-top: 2em;">
+  <strong><b>Accessibility Statement: </b></strong> 
+        <p> It is my goal to create a learning experience that is as accessible as possible. 
+          If you anticipate any issues related to the format, materials, or requirements of this course, please meet with me outside of class so we can explore potential options. 
+          Students with disabilities may also wish to work with the Student Disability Access Center (SDAC) to discuss a range of options to removing barriers in this course, 
+          including official accommodations. We are fortunate to have an SDAC advisor, Courtney MacMasters, physically located in Engineering. You may email her at 
+          <a href="mailto:cmacmasters@virginia.edu>cmacmasters@virginia.edu</a> to schedule an appointment. For general questions please visit the SDAC website: <a href="sdac.studenthealth.virginia.edu">sdac.studenthealth.virginia.edu</a>. 
+          If you have already been approved for accommodations through SDAC, please send us your accommodation letter and meet with us so we can develop an implementation plan together.</p>
+      </p>
+      
+       <p id="integrity" style="padding-top: 2em;">
+  <strong><b>Academic Integrity Statement: </b></strong> 
+        <p>"The School of Engineering and Applied Science relies upon and cherishes its community of trust. 
+        I firmly endorse, uphold, and embrace the University's Honor principle that students will not lie, 
+        cheat, or steal, nor shall they tolerate those who do. I recognize that even one honor infraction can 
+        destroy an exemplary reputation that has taken years to build. Acting in a manner consistent with the principles 
+        of honor will benefit every member of the community both while enrolled in the Engineering School and in the future. 
+        Students are expected to be familiar with the <a href="http://honor.virginia.edu/academic-fraud">university honor code</a>, 
+        including the section on academic fraud." <br />
+        <br />In summary, if assignments are individual then no two students should submit the same source code -- any overlap in source code of 
+        sufficient similarity will be potentially flagged as failure to abide to the Honor Code. You can discuss, you can share resources, you can talk
+        about the assignment but not share code as this would potentially incur on an honor code violation.
+        Regardless of circumstances, I will assume that any source code, text, or images submitted alongside reports or projects are of the authorship
+        of the individual students unless otherwise explicitly stated through appropriate means. Any missing information regarding sources will be regarded potentially
+        as a failure to abide by the academic integrity statement even if that was not the intent. Please be careful clearly stating
+  what is your original work and what is not in all assignments.</p>
+      </p>
+</div>
+      
+<div class="resources-text"  id = "resources" style="padding-top: 4em;">
+  <h4> Additional Resources </h4>
+  <hr>
+      <p id="career" style="padding-top: 2em;">
+      <strong><b>Support for Career Development: </b></strong>
+          <p>Engaging in your career development is an important part of your student experience. For example, presenting at a research conference, 
+             attending an interview for a job or internship, or participating in an extern/shadowing experience are not only necessary steps on your 
+             path but are also invaluable lessons in and of themselves. I wish to encourage and support you in activities related to your career 
+             development. To that end, please notify me by email as far in advance as possible to arrange for appropriate accommodations.</p>
+       </p>
+
+      <p id="support" style="padding-top: 2em;">
+  <strong><b>Student Support Team: </b></strong>
+        <p>You have many resources available to you when you experience academic or personal stresses. In addition to your professors, the School of 
+           Engineering and Applied Science has staff members located in Thornton Hall who you can contact to help manage academic or personal challenges. 
+           Please do not wait until the end of the semester to ask for help!</p>
+  <strong><b>Learning: </b></strong>
+        <div>
+          <span> <a href="mailto:ll4uu@virginia.edu">Lisa Lampe</a>, Assistant Dean for Undergraduate Affairs </span>
+        </div>                                  
+        <div>
+          <span> <a href="">To be hired</a>, Director of Student Success </span>
+        </div>
+        <div>
+          <span> <a href="mailto:cmacmasters@virginia.edu">Courtney MacMasters</a>, Accessibility Specialist </span> 
+        </div>
+        <div>
+          <span> <a href="https://engineering.virginia.edu/current-students/current-undergraduate-students/student-support/tutoring">Free tutoring</a> is available for most classes</p> </span>
+        </div>
+   <strong><b>Health and Well-being: </b></strong>
+        <div>
+          <span><a href="mailto:mwu5gs@virginia.edu">Kelly Garrett</a>, Assistant Dean of Students, Safety and Support</span>
+        </div>
+        <div>
+          <span> Elizabeth Ramirez-Weaver, CAPS counselor </span>
+        </div>
+        <div>
+        <span> Katie Fowler, CAPS counselor </span>
+        </div>
+        <p>You may schedule time with the CAPS counselors through <a href="https://www.studenthealth.virginia.edu/getting-started-caps">Student Health</a>. 
+           When scheduling, be sure to specify that you are an Engineering student. You are also urged to use <a href="https://www.studenthealth.virginia.edu/timelycare">TimelyCare</a> 
+           for either scheduled or on-demand 24/7 mental health care.</p>
+   <strong><b>Community and Identity: </b></strong>
+        <p>The Center for Diversity in Engineering (CDE) is a student space dedicated to advocating for underrepresented groups in STEM. It exists to 
+        connect students with the academic, financial, health, and community resources they need to thrive both at UVA and in the world. The CDE includes
+        an open study area, event space, and staff members on site. Through this space, we affirm and empower equitable participation toward intercultural
+        fluency and provide the resources necessary for students to be successful during their academic journey and future careers.</p>
+      </p>
+    </div>
+    
+<p id="discrimination" style="padding-top: 2em;">
+  <strong><b>Harrassment, Discrimination and Interpersonal Violence:</b></strong>
+<p>The University of Virginia is dedicated to providing a safe and equitable learning environment for all students. 
+  If you or someone you know has been affected by power-based personal violence, more information can be found on the UVA Sexual Violence website 
+  that describes reporting options and resources available - <a href="www.virginia.edu/sexualviolence">www.virginia.edu/sexualviolence</a>.</p>
+  <p>The same resources and options for individuals who experience sexual misconduct are available for discrimination, harassment, and retaliation.  
+    UVA prohibits discrimination and harassment based on age, color, disability, family medical or genetic information, gender identity or expression, 
+    marital status, military status, national or ethnic origin, political affiliation, pregnancy (including childbirth and related conditions), race, 
+    religion, sex, sexual orientation, veteran status. UVA policy also prohibits retaliation for reporting such behavior. </p>
+<p>If you witness or are aware of someone who has experienced prohibited conduct, you are encouraged to submit a report to Just Report It 
+  (<a href="justreportit.virginia.edu">justreportit.virginia.edu</a>) or contact EOCR, the office of Equal Opportunity and Civil Rights.</p>
+  <p>If you would prefer to disclose such conduct to a confidential resource where what you share is not reported to the University, you can turn to 
+    Counseling & Psychological Services (“CAPS”) and Women’s Center Counseling Staff and Confidential Advocates (for students of all genders).</p>
+<p>As your professor, know that I care about you and your well-being and stand ready to provide support and resources as I can. As a faculty member, I am a
+  responsible employee, which means that I am required by University policy and by federal law to report certain kinds of conduct that you report 
+  to me to the University's Title IX Coordinator. The Title IX Coordinator's job is to ensure that the reporting student receives the resources and 
+  support that they need, while also determining whether further action is necessary to ensure survivor safety and the safety of the University community. </p>
+</p>
+</div>
+
+  </main>
+</div>
+
+<footer class="page-footer">
+  <p>Department of Civil and Environmental Engineering @ <a href="http://www.virginia.edu">the University of Virginia</a> ‒ 151 Engineer's Way, Olsson Hall, Charlottesville, VA 22904-4740
+  </p>
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+</body>
+</html>
+
+<!-- Copyright Julianne Quinn - Spring 2024 -->
+<!-- Web template from Dr. Vicente Ordonez -->
