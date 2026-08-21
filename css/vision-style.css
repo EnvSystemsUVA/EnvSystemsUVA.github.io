@@ -9,16 +9,23 @@
 }
 
 .assignment{
-  font-size:0.94em;
+  font-size:1.0em;
   padding:0px;
   background-color: #ffe !important;
   margin:0px;
 }
 
 .exam{
-  font-size:0.94em;
+  font-size:1.0em;
   padding:0px;
   background-color: #edf6df !important;
+  margin:0px;
+}
+
+.lecture{
+  font-size:1.0em;
+  padding:0px;
+  background-color: #ffffff !important;
   margin:0px;
 }
 
